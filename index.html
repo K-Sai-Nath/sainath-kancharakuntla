@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8731b79a14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.jpeg" class="logo"></img>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Sai Nath</span></h1>
+        </div>
+    </div>
+  </div> 
+  <!--------about------------>
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col1">
+                <img src="WhatsApp Image 2024-01-06 at 19.13.03 (1).jpeg">
+
+            </div>
+            <div class="about-col2">
+
+                <h1 class="sub-title">About Me</h1>
+                <p>I am K. Sai Nath,
+                     a Computer Science and Engineering 
+                     graduate from SR University. 
+                     Passionate about technology and 
+                     its transformative power, my journey through my Bachelor's in Technology 
+                     has equipped me with a robust foundation in programming, problem-solving, and software 
+                     development. I am driven by a relentless curiosity to explore new technologies and their applications, 
+                     striving to create innovative solutions that impact our world positively.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education Percentage</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>C</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Java Script</li>
+                            <li>Supervised and 
+                                Unsupervised Learning</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>Btech in Computer Science and Engineering-----------9.26 CGPA</li>
+                            <li>Class 12-----------97%</li>
+                            <li>class 10----------9.0 CGPA</li>
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+  </div> 
+  <!-------------------projects------------------->
+  <div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <h2>Employee Management System</h2>
+                <p style="text-align: justify;">Developed an Employee Management System utilizing a linked list data structure to efficiently 
+                    manage employee records, 
+                    enabling streamlined operations 
+                    for human resources and                                                                                                                                                                                                                                                   
+                    administrative tasks.</p>
+            </div>
+            <div>
+                <h2>Photo Cast (Web Development)</h2>
+                <p style="text-align: justify;">Developed a user-centric website, "Photo Cast," enabling users to 			
+                    access, view, and download high-quality images. The platform 	
+                    prioritized user experience and image quality for seamless image 						
+                    browsing and downloading.
+                </p>
+            </div>
+            <div>
+                <h2>Diabetes Prediction (Machine Learning)
+                </h2>
+                <p style="text-align: justify;">Developed a machine learning model to predict the onset of 	
+                diabetes based on health indicators and patient data. Utilized 																															
+                supervised learning techniques to build a predictive model aiming to assist in early diagnosis and proactive management of 																																										
+                diabetes.
+                </p>
+            </div>
+            <div>
+                <h2>Automatic Hand Sanitiser(IOT Project)</h2>
+                <p style="text-align: justify;">Designed and developed an IoT-based Automatic Hand Sanitizer system to promote hygiene practices and limit the spread of 																															
+                    pathogens in public spaces using various sensors.																										
+                </p>
+            </div>
+            <div>
+                <h2>Medication Remainder</h2>
+                <p style="text-align: justify;">Developed a medication reminder application in Java, leveraging JDBC for database connectivity and Swing for GUI.This 																																															
+                    application helps in managing medication schedules effectively.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!---------------contact---------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>sainathkancharakuntla@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>8498910702</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sai-nath-reddy-a4b93926b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/K-Sai-Nath"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="Sai Nath Resume.pdf" class="btn">Download Resume</a>
+            </div>
+
+        </div>
+
+    </div>
+  </div>
+  <script>
+    var tablinks=document.getElementsByClassName('tab-links');
+    var tabcontents=document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script>
+    var sidemenu=document.getElementById("sidemenu")
+    function closemenu(){
+        sidemenu.style.right='-200px';
+    }
+    function openmenu(){
+        sidemenu.style.right="0"
+
+    }
+  </script>
+  <script>
+   
+  </script>
+</body>
+</html>
