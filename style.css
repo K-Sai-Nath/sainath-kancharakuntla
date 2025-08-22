@@ -76,13 +76,13 @@ nav ul li a:hover::after{
 .about-col1{
     flex-basis: 35%;
 }
-.about-col1 img{
+.about-col1 img {
     width: 100%;
+    max-width: 250px;  /* keeps it a reasonable size */
+    height: auto;
     border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    display: block;
+    margin: 0 auto;
 }
 .about-col2{
     flex-basis: 60%;
